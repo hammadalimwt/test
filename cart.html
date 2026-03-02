@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar (same) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">🛒 ShopHive</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html" class="active">Cart <span class="badge" id="cartBadge">0</span></a></li>
+                <li><a href="wishlist.html">Wishlist <span class="badge" id="wishlistBadge">0</span></a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-outline">Login</a>
+                    <a href="signup.html" class="btn-primary">Signup</a>
+                </li>
+                <li id="userMenu" style="display: none;">
+                    <span id="welcomeUser">Hi, User</span>
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </li>
+                <li>
+                    <button id="darkModeToggle" class="theme-toggle">🌙 Dark</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <div class="cart-section">
+        <div class="container">
+            <h2 class="section-title">🛒 My Shopping Cart</h2>
+
+            <div class="cart-container">
+                <!-- Cart Items will load here -->
+                <div class="cart-items" id="cartItems">
+                    <!-- JavaScript will populate this -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Total Items:</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Price:</span>
+                        <span id="totalPrice">₹0</span>
+                    </div>
+                    <button class="btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

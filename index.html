@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ E-Commerce | Hackathon | Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">🛒 ShopHive</a>
+            </div>
+
+            <!-- Toggle menu for mobile -->
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <ul class="nav-menu" id="navMenu">
+                <!-- <input type="text" id="searchInput" placeholder="🔍 Search products..." class="search-input"> -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cart.html">Cart <span class="badge" id="cartBadge">0</span></a></li>
+                <li><a href="wishlist.html">Wishlist <span class="badge" id="wishlistBadge">0</span></a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-outline">Login</a>
+                    <a href="signup.html" class="btn-primary">Signup</a>
+                </li>
+                <li id="userMenu" style="display: none;">
+                    <span id="welcomeUser">Hi, User</span>
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </li>
+                <!-- Dark mode toggle -->
+                <li>
+                    <button id="darkModeToggle" class="theme-toggle">🌙 Dark</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Slider start -->
+    <section class="hero">
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <!-- Slide 1 - Summer Sale -->
+                <div class="slide active">
+                    <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=400&fit=crop"
+                        alt="Summer Sale Girl Shopping Online">
+                    <div class="slide-content">
+                        <h2>Summer Sale</h2>
+                        <p>50% off on selected items</p>
+                    </div>
+                </div>
+                <!-- Slide 2 - New Arrivals -->
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=400&fit=crop"
+                        alt="New Arrivals Girl Shopping">
+                    <div class="slide-content">
+                        <h2>New Arrivals</h2>
+                        <p>Check out the latest trends</p>
+                    </div>
+                </div>
+                <!-- Slide 3 - Free Shipping -->
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/4391478/pexels-photo-4391478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=400&fit=crop"
+                        alt="Free Shipping Girl Delivery">
+                    <div class="slide-content">
+                        <h2>Free Shipping</h2>
+                        <p>On orders above Rs. 999</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Slider Controls -->
+            <button class="slider-btn prev" id="prevSlide">❮</button>
+            <button class="slider-btn next" id="nextSlide">❯</button>
+    
+            <!-- Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Slider end -->
+
+    <!-- Products Section start -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">✨ Featured Products</h2>
+
+            <!-- Search and Filter Bar -->
+            <div class="filter-bar">
+                <input type="text" id="searchInput" placeholder="🔍 Search products..." class="search-input">
+
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Clothing">Clothing</option>
+                </select>
+
+                <select id="sortFilter" class="filter-select">
+                    <option value="default">Sort by</option>
+                    <option value="lowToHigh">Price: Low to High</option>
+                    <option value="highToLow">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will appear here -->
+            </div>
+        </div>
+    </section>
+    <!-- Products Section end -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

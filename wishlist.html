@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">🛒 ShopHive</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart <span class="badge" id="cartBadge">0</span></a></li>
+                <li><a href="wishlist.html" class="active">Wishlist <span class="badge" id="wishlistBadge">0</span></a>
+                </li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-outline">Login</a>
+                    <a href="signup.html" class="btn-primary">Signup</a>
+                </li>
+                <li id="userMenu" style="display: none;">
+                    <span id="welcomeUser">Hi, User</span>
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </li>
+                <li>
+                    <button id="darkModeToggle" class="theme-toggle">🌙 Dark</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Wishlist Section -->
+    <div class="wishlist-section">
+        <div class="container">
+            <h2 class="section-title">❤️ My Wishlist</h2>
+
+            <div class="products-grid" id="wishlistGrid">
+                <!-- Wishlist items will load here -->
+            </div>
+
+            <div id="emptyWishlist" style="display: none; text-align: center; padding: 50px;">
+                <h3>Your wishlist is empty</h3>
+                <p>Browse products and add to wishlist</p>
+                <a href="index.html" class="btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
